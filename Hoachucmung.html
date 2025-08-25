@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurelia Flowers</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- đổi logo.png thành logo của bạn -->
+        <img src="images/" alt="Aurelia Flowers">
+      </div>
+
+      <nav class="nav-links">
+        <a href="#">Trang chủ</a>
+        <a href="#">Giỏ hoa</a>
+        <a href="#">Bó Hoa</a>
+        <a href="#">Hoa Cưới</a>
+        <a href="#">Hoa Chúc Mừng</a>
+      </nav>
+
+      <div class="search-box">
+         <input type="text" placeholder="Tìm kiếm...">
+         <button type="submit" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
+     </div>
+        <a href="#" class="cart-link" title="Giỏ hàng">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="badge">0</span>
+        </a>
+        <a href="#" title="Tài khoản"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- THANH TỔNG GIỎ HÀNG -->
+  <div class="cart-bar">
+    <div class="container cart-bar-inner">
+      <div>🧾 Tổng: <strong><span id="total">0</span> đ</strong></div>
+      <button class="btn btn-checkout" onclick="checkout()">Thanh toán</button>
+    </div>
+  </div>
+
+  <!-- BANNER ẢNH -->
+  <section class="banner">
+    <!-- đổi banner-hoa.jpg thành ảnh của bạn -->
+    <img src="images/bannerr.jpg" alt="Banner Hoa Tươi">
+  </section>
+
+  <main>
+    <!-- SẢN PHẨM NỔI BẬT -->
+    <section class="products container">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="product-grid">
+        <div class="product-card" onclick="showPopup('images/Beseller1.jpg','Bó hoa hồng đỏ',350000)">
+          <img src="images/Beseller1.jpg" alt="Hoa 1">
+          <h3>Bó hoa hồng đỏ</h3>
+          <p>350.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller22.jpg','Bó hoa tulip',420000)">
+          <img src="images/Beseller22.jpg" alt="Hoa 2">
+          <h3>Bó hoa tulip</h3>
+          <p>420.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller3.jpg','Bó cẩm chướng',280000)">
+          <img src="images/Beseller3.jpg" alt="Hoa 3">
+          <h3>Bó hoa cẩm chướng</h3>
+          <p>280.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller4.jpg','Bó hướng dương',300000)">
+          <img src="images/Beseller4.jpg" alt="Hoa 4">
+          <h3>Bó hoa hướng dương</h3>
+          <p>300.000đ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Ô TRÒN -->
+    <section class="circle-section container">
+      <h2>Bộ sưu tập</h2>
+      <div class="circle-grid">
+        <!-- thay ảnh + href tùy ý -->
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Bohoa.jpg" alt="Ảnh 1"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Giohoa.jpg" alt="Ảnh 2"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Hoacuoi.jpg" alt="Ảnh 3"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/hoachucmung.jpg" alt="Ảnh 4"></a>
+      </div>
+    </section>
+  </main>

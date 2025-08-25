@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurelia Flowers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <span>🚚 Miễn phí giao hoa nội thành với đơn từ 300k 💐 | 📞 0909 123 456</span>
+    
+   
+    <div class="lang-dropdown">
+      <button class="lang-btn">
+        🌐 Ngôn ngữ <i class="fas fa-chevron-down"></i>
+      </button>
+      <ul class="lang-menu">
+        <li><a href="#">🇻🇳 Tiếng Việt</a></li>
+        <li><a href="#">🇬🇧 English</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/Logo.png" alt="Aurelia Flowers">
+      </div>
+      <nav class="nav-link">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li class="dropdown">
+            <a href="#">Giỏ hoa<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Giỏ Hoa Baby🤍</a></li>
+              <li><a href="#">Giỏ hoa đồng tiền 🌼</a></li>
+              <li><a href="#">Giỏ Hoa Lily 🌺</a></li>
+              <li><a href="#">Giỏ Hoa Mix Nhiều Loại 💐</a></li>
+              <li><a href="#">Loại khác...</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Bó Hoa<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Bó Hoa Hồng Mix 🌈</a></li>
+              <li><a href="#">Bó Hoa Tulip 🌷</a></li>
+              <li><a href="#">Bó Hoa Cẩm Tú Cầu </a></li>
+              <li><a href="#">Hoa bó đơn giản</a></li>
+              <li><a href="#">Loại khác...</a></li>
+            </ul>
+          </li>
+        
+          </li>
+          <li class="dropdown">
+            <a href="#">Hoa Cưới<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Hoa cưới Hoa Hồng 🥰</a></li>
+              <li><a href="#">Hoa cưới Hoa Baby 🤍</a></li>
+              <li><a href="#">Hoa cưới Mix nhiều hoa ✨</a></li>
+              <li><a href="#">Hoa Cài Áo Chú Rể 🌼</a></li>
+              <li><a href="#">Hoa Trang Trí (cổng cưới, bàn tiệc, xe hoa…)</a></li>
+              <li><a href="#">Loại khác...</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="dropdown">
+            <a href="#">Hoa Chúc Mừng<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Khai Trương🎊</a></li>
+              <li><a href="#">Mừng Sinh Nhật🎂</a></li>
+              <li><a href="#">Mừng Lễ Tốt Nghiệp🎓</a></li>
+              <li><a href="#">Mừng Tân Gia🏡</a></li>
+              <li><a href="#">Mừng Lễ Thăng Chức/Thành Tích🏆</a></li>
+              <li><a href="#">Loại khác...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm...">
+          <button aria-label="Tìm kiếm"><i class="fa fa-search"></i></button>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i><span class="badge">2</span></a>
+      </div>
+      </div>
+  </div>
+    </header>
+
+  <!-- THANH TỔNG GIỎ HÀNG -->
+  <div class="cart-bar">
+    <div class="container cart-bar-inner">
+      <div>🧾 Tổng: <strong><span id="total">0</span> đ</strong></div>
+      <button class="btn btn-checkout" onclick="checkout()">Thanh toán</button>
+    </div>
+  </div>
+
+ 
+  <section class="banner">
+    <img src="images/bannerr.jpg" alt="Banner Hoa Tươi">
+  </section>
+
+  <main>
+    <section class="products container">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="product-grid">
+        <div class="product-card" onclick="showPopup('images/Beseller1.jpg','Bó hoa hồng đỏ',350000)">
+          <img src="images/Beseller1.jpg" alt="Hoa 1">
+          <h3>Bó hoa hồng đỏ</h3>
+          <p>350.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller22.jpg','Bó hoa tulip',420000)">
+          <img src="images/Beseller22.jpg" alt="Hoa 2">
+          <h3>Bó hoa tulip</h3>
+          <p>420.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller3.jpg','Bó cẩm chướng',280000)">
+          <img src="images/Beseller3.jpg" alt="Hoa 3">
+          <h3>Bó hoa cẩm chướng</h3>
+          <p>280.000đ</p>
+        </div>
+        <div class="product-card" onclick="showPopup('images/Beseller4.jpg','Bó hướng dương',300000)">
+          <img src="images/Beseller4.jpg" alt="Hoa 4">
+          <h3>Bó hoa hướng dương</h3>
+          <p>300.000đ</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="circle-section container">
+      <h2>Bộ sưu tập</h2>
+      <div class="circle-grid">
+        <!-- thay ảnh + href tùy ý -->
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Bohoa.jpg" alt="Ảnh 1"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Giohoa.jpg" alt="Ảnh 2"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/Hoacuoi.jpg" alt="Ảnh 3"></a>
+        <a href="#" class="circle"><img src="images/Bộ sưu tập/hoachucmung.jpg" alt="Ảnh 4"></a>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Về chúng tôi</h3>
+        <p><strong>Aurelia Flowers</strong></p>
+        <p>Địa chỉ: 123 Nguyễn Văn Trỗi, Q.1, TP.HCM</p>
+        <p><i class="fas fa-phone"></i> 0123 456 789</p>
+        <p><i class="fas fa-envelope"></i> aureliaflowers@gmail.com</p>
+      </div>
+      <div>
+        <h3>Thương hiệu</h3>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hỗ trợ</h3>
+        <ul>
+          <li><a href="#">Chính sách & điều khoản</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Theo dõi</h3>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Aurelia Flowers</p>
+    </div>
+  </footer>
+
+ 
+  <div id="popup" class="popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-modal="true">
+      <button class="close" aria-label="Đóng" onclick="hidePopup()">&times;</button>
+      <img id="popup-img" src="" alt="Sản phẩm">
+      <h3 id="popup-title"></h3>
+      <p id="popup-price"></p>
+      <button id="popup-add" class="btn btn-primary">Thêm vào giỏ</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
